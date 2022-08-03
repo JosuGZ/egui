@@ -299,6 +299,13 @@ impl Default for NativeOptions {
     }
 }
 
+impl NativeOptions {
+  /// Creates a default NativeOptions object
+  pub fn new() -> Self {
+    Self::default()
+  }
+}
+
 #[cfg(not(target_arch = "wasm32"))]
 impl NativeOptions {
     /// The theme used by the system.
